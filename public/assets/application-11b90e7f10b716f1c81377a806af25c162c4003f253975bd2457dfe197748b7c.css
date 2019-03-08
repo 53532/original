@@ -1,4 +1,5 @@
 /*toppage*/
+
 .title{
   text-align:center; 
   margin-top: 30px;
@@ -43,22 +44,9 @@ p.book-title {
   overflow: hidden;
 }
 
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-.book_show{
+.book_show　{
   float: left;
-  width:100%;
-  background-color: #ffddff;
-}
-.book_show img {
-width: 100%;
-height: 100%;
-}
-.discription{
-  float: right;
-  width:40%;
-  background-color: #ddddff;
+  width: 60%;
+  height: 100px;
+  background-color: #ddffdd;
 }

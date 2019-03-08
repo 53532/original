@@ -1,0 +1,14 @@
+
+/*画像と文書を並べて表示時する*/
+  .inner {     
+	float: left ;
+	}
+	.inner img{
+width:80%;
+max-width: 100%;
+height: auto;
+	}
+  p.inner {
+	float:right; 　 /*右側に配置する*/
+	font-size: 40px;
+   }
