@@ -56,3 +56,4 @@ gem 'rakuten_web_service' , '1.5.0'
 gem 'kaminari'
 gem 'pry-byebug', group: :development
 gem 'dotenv-rails'
+gem 'devise'
