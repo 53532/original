@@ -1,0 +1,119 @@
+/*navvar*/
+.navbar-default {
+  background-color: #ff9d00;
+  border-color: #ffd266;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #94909a;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #94909a;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #94909a;
+  background-color: #ffd266;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #94909a;
+  background-color: #ffd266;
+}
+.navbar-default .navbar-toggle {
+  border-color: #ffd266;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ffd266;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #94909a;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #94909a;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #94909a;
+    background-color: #ffd266;
+  }
+}
+
+/*toppage*/
+.title{
+  text-align:center; 
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.logo {
+  margin: 20px auto;
+  width:256px;
+}
+
+.bottun{
+  text-align:center;
+  margin: 20px;
+}
+
+
+/* search */
+.search {
+  margin-bottom: 20px;
+}
+
+/* search */
+.search {
+  margin-bottom: 20px;
+}
+
+/* item */
+.book .panel-body {
+  height: 60px;
+  background-color: #ffead6;
+}
+.book .panel-heading {
+  height: 230px;
+  background-color: #fff;
+}
+.book .panel-heading img {
+  height: 100%;
+  max-width: 100%;
+}
+p.book-title {
+  /* 文の行数を2行に保ち、最後に ... を追加するスタイル */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
