@@ -22,29 +22,24 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    if current_user.borrow?(@book)
+      current_user.back(@book)
+      flash[:success] = '本を返却しました。'
+    else
+      current_user.borrow(@book)
+      flash[:success] = '本を貸出ました。'
+    end
   end
-
+  
+  def create
+    @book = book.new(isbn: params[:book_isbn])
+    results = RakutenWebService::Books::Total.search({isbn: @book.isbn})
+    @book = Book.new(read(results.first))
+    @book.save
+  end
+  
   def destroy
   end
   
-  private
-  
-  def read(result)
-    title = result['title']
-    author = result['author']
-    publisher_name = result['publisherName']
-    published_date = result['salesDate']
-    isbn = result['isbn']
-    image_url = result['mediumImageUrl'].gsub('?_ex=120x120','')
-    
-    {
-      title: title,
-      author: author,
-      publisher_name: publisher_name,
-      published_date: published_date,
-      isbn: isbn,
-      image_url: image_url
-   }
-  end
 end
 

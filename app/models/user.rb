@@ -14,4 +14,13 @@ class User < ApplicationRecord
   def back(book)
     book.update(user_id: nil)
   end
+  
+  def borrow?(book)
+    if
+      book.user_id == self.id
+      return true
+    else
+      return false
+    end
+  end
 end
