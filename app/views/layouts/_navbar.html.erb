@@ -14,11 +14,12 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-        <li><a href="#">ユーザー情報</a></li>
-        <li><a href="#">いちらん</a></li>
+          <li>
+            <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete %>
+          </li>
         <% else %>
-        <li><a href="/users/sign_up">新規登録</a></li>
-        <li><a href="/users/sign_in">ログイン</a></li>
+        <li><%= link_to '新規登録', new_user_registration_path %></li>
+        <li><%= link_to 'ログイン', new_user_session_path %></li>
         <% end %>
       </ul>
       </div>

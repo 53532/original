@@ -52,7 +52,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   #mailer setting
-  config.action_mailer.default_url_options = { protocol: 'https', host: 'd32fe8bf14da4eff8e4838e0338b53a1.vfs.cloud9.us-east-1.amazonaws.com', port: 8080 }
+  config.action_mailer.default_url_options = { protocol: 'https', host: 'd32fe8bf14da4eff8e4838e0338b53a1.vfs.cloud9.us-east-1.amazonaws.com' }
   
   # mail setting
   config.action_mailer.raise_delivery_errors = true
