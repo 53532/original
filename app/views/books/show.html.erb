@@ -7,5 +7,5 @@
 	<p>出版日：<%= @book.published_date %></p>
 	<p>ISBN：<%= @book.isbn %></p>
 	<p>図書館登録日：<%= @book.created_at %></p>
-	<p>今借りている人：</p>
+	<p>今借りている人：<%= @book.user.name %></p>
 </div>
