@@ -19,9 +19,21 @@ class BooksController < ApplicationController
       end
     end
   end
+  def create
+    @book = Book.new(isbn: params[:book_isbn])
+    results = RakutenWebService::Books::Total.search({isbn: @book.isbn})
+    @book = Book.new(read(results.first))
+    @book.save
+    flash[:success] = '本を登録しました。'
+    redirect_back(fallback_location: root_path)
+  end
 
   def show
     @book = Book.find(params[:id])
+  end
+  
+  def update
+        @book = Book.find(params[:id])
     if current_user.borrow?(@book)
       current_user.back(@book)
       flash[:success] = '本を返却しました。'
@@ -30,13 +42,7 @@ class BooksController < ApplicationController
       flash[:success] = '本を貸出ました。'
     end
   end
-  
-  def create
-    @book = book.new(isbn: params[:book_isbn])
-    results = RakutenWebService::Books::Total.search({isbn: @book.isbn})
-    @book = Book.new(read(results.first))
-    @book.save
-  end
+
   
   def destroy
   end

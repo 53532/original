@@ -3,9 +3,11 @@
     <%= hidden_field_tag :user_id, current_user.id %>
     <%= submit_tag '返却', class: 'btn btn-success' %>
     <% end %>
-<% else %>
+<% elsif @book.user_id == nil %>
     <%= form_tag(book_path) do %>
     <%= hidden_field_tag :user_id, current_user.id %>
     <%= submit_tag '貸出', class: 'btn btn-primary' %>
     <% end %>
+<% else %>
+     <button type="button" class="btn btn-default">貸出中</button>
 <% end %>
