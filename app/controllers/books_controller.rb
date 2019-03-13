@@ -40,14 +40,16 @@ class BooksController < ApplicationController
 
     end
   end
-  def borrow #postでルーティングを作る
+  def borrow 
+      @book = Book.find(params[:id])
       current_user.borrow(@book)
-      flash[:success] = '本を貸出ました。'
+      flash[:success] = '本を貸し出しました。'
       redirect_back(fallback_location: root_path)
   end
   
-  def back　#postでルーティングを作る
-    current_user.back(@book)
+  def back
+      @book = Book.find(params[:id])
+      current_user.back(@book)
       flash[:success] = '本を返却しました。'
       redirect_back(fallback_location: root_path)
   end
