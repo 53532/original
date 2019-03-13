@@ -9,6 +9,9 @@
               </div>
               <div class="panel-body text-center">
               <p class="book-title"></p><%= link_to book.title, book %></p>
+              <% if book.user_id != nil %>
+              <h3><span class="label label-info">貸出中</span></h3>
+              <% end %>
             </div>
           </div>
         </div>
