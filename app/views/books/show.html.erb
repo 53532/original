@@ -8,6 +8,7 @@
 	 <%= link_to "図書館から削除する", @book, method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn btn-danger' %>
 	 </div>
 	</div>
+	<div class="content">
 	<p>タイトル：<%= @book.title %></p>
 	<p>著者:<%= @book.author %></p>
 	<p>出版社：<%= @book.publisher_name %></p>
@@ -17,5 +18,6 @@
 	<% unless @book.user_id == nil %> 
 	<p>借りている人：<%= @book.user.name %></p>
 	<% end %>
+	</div>
 	<%= render 'books/borrow_button' %>
 </div>
