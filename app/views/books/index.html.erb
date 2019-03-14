@@ -1,3 +1,9 @@
 <h2>蔵書一覧</h2>
 
-<%= render 'books', books: @books %>
+<%= form_tag books_path, method: :get do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", title: nil %>
+  </p>
+<% end %>
+<%= render('books', books: @books) %>

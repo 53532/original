@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @book = Book.all
+    @books = Book.search(params[:search])
   end
 
   def new
@@ -32,14 +33,6 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
   
-  def update
-        @book = Book.find(params[:id])
-    if current_user.borrow?(@book)
-      
-    else
-
-    end
-  end
   def borrow 
       @book = Book.find(params[:id])
       current_user.borrow(@book)
@@ -58,4 +51,3 @@ class BooksController < ApplicationController
   end
   
 end
-

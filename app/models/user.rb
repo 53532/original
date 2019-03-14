@@ -5,7 +5,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,:confirmable
   
-  has_many :books
+  has_many :books, dependent: :destroy
   
   def borrow(book)
     book.update(user_id: self.id)
