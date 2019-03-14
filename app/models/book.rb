@@ -1,5 +1,5 @@
 class Book < ApplicationRecord
-    acts_as_paranoid
+  acts_as_paranoid
   belongs_to :user,optional: true
   validates :title, presence: true, length: { maximum:255 }
   validates :author, presence: true, length: { maximum:255 }
