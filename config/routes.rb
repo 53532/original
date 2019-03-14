@@ -11,6 +11,6 @@ Rails.application.routes.draw do
       post :back
     end
   end
-  resources :users, only:[:show] 
+  resources :users, only:[:show,:edit,:update] 
   
 end

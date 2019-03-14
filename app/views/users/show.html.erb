@@ -1,2 +1,2 @@
 <p><%= @user.name %> さんの借りている本一覧</p>
- 
+ <%= render 'books/books', books: @user.books %>
