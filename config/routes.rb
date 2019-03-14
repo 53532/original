@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'users/show'
-  devise_for :users
   root to: 'toppages#index'
+  devise_for :users
+  get 'books/delete_book'
+  get 'users/show'
   
-  resources :books, only: [:index,:show,:destroy,:new,:create] do
+  resources :books, only: [:index,:show,:new,:create,:destroy] do
     member do
       post :borrow
       post :back

@@ -1,6 +1,13 @@
 <%= stylesheet_link_tag "book", :media => "all" %>
 <div class="clearfix">
-	<div class="inner clearfix"><img src="<%= @book.image_url %>" alt=""></div>
+	<div class="inner clearfix">
+		<div class="img">
+		<img src="<%= @book.image_url %>" alt="">
+		</div>
+		<div class ="delete">
+	 <%= link_to "図書館から削除する", @book, method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn btn-danger' %>
+	 </div>
+	</div>
 	<p>タイトル：<%= @book.title %></p>
 	<p>著者:<%= @book.author %></p>
 	<p>出版社：<%= @book.publisher_name %></p>

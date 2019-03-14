@@ -110,6 +110,8 @@ GEM
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    paranoia (2.4.1)
+      activerecord (>= 4.0, < 5.3)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -210,6 +212,7 @@ DEPENDENCIES
   kaminari
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
+  paranoia
   pry-byebug
   puma (~> 3.0)
   rails (~> 5.0.6)
