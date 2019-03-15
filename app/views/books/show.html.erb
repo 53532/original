@@ -19,10 +19,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
-			<%= link_to "図書館から削除する", @book, method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn btn-danger' %>
+			<% if @book.user_id == nil %>
+				<div class="row">
+					<div class="col-md-6">
+						<%= link_to "図書館から削除する", @book, method: :delete, data: { confirm: "本当に削除しますか？" }, class: 'btn btn-danger' %>
+					</div>
 				</div>
-			</div>
+			<% end %>
 			
 </div>
