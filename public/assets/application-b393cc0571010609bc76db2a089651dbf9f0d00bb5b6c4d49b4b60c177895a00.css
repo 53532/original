@@ -1,0 +1,77 @@
+/*toppage*/
+
+.title{
+  text-align:center; 
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.logo {
+  margin: 20px auto;
+  width:256px;
+}
+
+.top_bottun{
+  text-align:center;
+  margin: 20px;
+}
+
+
+
+/* search */
+.search {
+  margin-bottom: 20px;
+}
+
+.page{
+  text-align: right;
+}
+
+/* book */
+
+
+.book .panel-body {
+  height: 120px;
+}
+.book .panel-heading {
+  height: 250px;
+}
+.book .panel-heading img {
+  height: 100%;
+  max-width: 100%;
+}
+p.book-title {
+  /* 文の行数を2行に保ち、最後に ... を追加するスタイル */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  height: 40px;
+}
+
+.book .buttons form {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.book_show{
+  float: left;
+  width:100%;
+  background-color: #ffddff;
+}
+.book_show img {
+width: 100%;
+height: 100%;
+}
+.discription{
+  float: right;
+  width:40%;
+  background-color: #ddddff;
+}
+
+
+/*book#show */
+.content {
+  padding-top: 100px;
+  font-size: 14pt;
+}
