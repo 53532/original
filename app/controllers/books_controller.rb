@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+    before_action :authenticate_user!
   def index
     @books = Book.search(params[:search]).page(params[:page]).per(20)
   end

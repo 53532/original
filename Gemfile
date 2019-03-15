@@ -59,4 +59,4 @@ gem 'dotenv-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
-gem 'paranoia'
+gem 'paranoia', "~> 2.2"

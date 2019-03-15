@@ -10,7 +10,7 @@
   width:256px;
 }
 
-.bottun{
+.top_bottun{
   text-align:center;
   margin: 20px;
 }
@@ -19,8 +19,7 @@
 
 /* search */
 .search {
-  float: left;
-  margin-top:30px;
+  margin-bottom: 20px;
 }
 
 .page{
@@ -28,38 +27,32 @@
 }
 
 /* book */
-.panel {
-    margin-bottom: 30px;
-    margin-top:10px;
-}
+
 
 .book .panel-body {
-  height: 60px;
-  background-color: #fff;
+  height: 120px;
 }
-
 .book .panel-heading {
   height: 250px;
-  background-color: #fff;
 }
 .book .panel-heading img {
   height: 100%;
   max-width: 100%;
 }
-.book-title {
+p.book-title {
   /* 文の行数を2行に保ち、最後に ... を追加するスタイル */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  height: 40px;
 }
 
-
-.clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
+.book .buttons form {
+  display: inline-block;
+  margin: 0 5px;
 }
+
 .book_show{
   float: left;
   width:100%;

@@ -10,7 +10,7 @@ class Book < ApplicationRecord
 
   def self.search(search)
     if search
-       Book.where(['title LIKE ?', "%#{search}%"])
+       Book.where(['title LIKE ? or isbn LIKE ?', "%#{search}%","%#{search}%"])
     else
       Book.all
     end

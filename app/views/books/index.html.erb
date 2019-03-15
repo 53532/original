@@ -1,12 +1,15 @@
-<h2>蔵書一覧</h2>
-<div class = 'search'>
-<%= form_tag books_path, method: :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", title: nil %>
-  </p>
-<% end %>
+
+<div class="row">
+  <div class="text-center">
+    <%= form_tag(books_path, method: :get, class: 'form-inline') do %>
+        <div class="form-group">
+          <%= text_field_tag :search, params[:search], class: 'form-control input-lg', placeholder: "タイトルかISBNを入力", size: 40 %>
+        </div>
+        <%= submit_tag '図書館内検索', title: nil,class: 'btn btn-success btn-lg' %>
+    <% end %>
+  </div>
 </div>
+
 <div  class="page">
   <%= paginate @books %>
 </div>
