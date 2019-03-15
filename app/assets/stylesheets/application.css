@@ -23,24 +23,34 @@
 }
 
 /* book */
+.panel {
+    margin-bottom: 30px;
+    margin-top:10px;
+}
+
 .book .panel-body {
   height: 60px;
   background-color: #fff;
 }
+
 .book .panel-heading {
-  height: 230px;
+  height: 250px;
   background-color: #fff;
 }
 .book .panel-heading img {
   height: 100%;
   max-width: 100%;
 }
-p.book-title {
+.book-title {
   /* 文の行数を2行に保ち、最後に ... を追加するスタイル */
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+}
+
+.borrowed  {
+  font-size: 100%;
 }
 
 .clearfix::after {
@@ -61,4 +71,11 @@ height: 100%;
   float: right;
   width:40%;
   background-color: #ddddff;
+}
+
+
+/*book#show */
+.content {
+  padding-top: 100px;
+  font-size: 14pt;
 }

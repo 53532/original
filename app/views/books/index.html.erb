@@ -6,5 +6,6 @@
     <%= submit_tag "Search", title: nil %>
   </p>
 <% end %>
+<%= paginate @books %>
 <%= render('books', books: @books) %>
 <%= paginate @books %>
