@@ -19,7 +19,12 @@
 
 /* search */
 .search {
-  margin-bottom: 20px;
+  float: left;
+  margin-top:30px;
+}
+
+.page{
+  text-align: right;
 }
 
 /* book */
