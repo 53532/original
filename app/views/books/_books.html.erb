@@ -11,14 +11,15 @@
               <div class="panel-body text-center">
                 <p class="book-title">
                   <%= link_to book.title, book %>
+                  <% if book.user_id != nil %>
+                      <span class="label label-info">貸出中</span>
+                  <% end %>
                 </p>
-                <% if book.user_id != nil %>
-                  <span class="borrowed label label-info">貸出中</span>
-                <% end %>
               </div>
             </div>
           </div>
         </div>
+      </div>
     <% end %>
   </div>
 <% end %>
