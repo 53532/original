@@ -13,7 +13,7 @@ module Tabelib
     # -- all .rb files in that directory are automatically loaded.
     config.i18n.default_locale = :ja
     config.time_zone = 'Asia/Tokyo'
-
+    config.assets.initialize_on_precompile = false
 
   end
 
