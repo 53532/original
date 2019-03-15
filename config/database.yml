@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: tabelib_production
   username: tabelib
   password: <%= ENV['TABELIB_DATABASE_PASSWORD'] %>

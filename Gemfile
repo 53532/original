@@ -60,3 +60,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'paranoia', "~> 2.2"
+
+group :production do
+  gem 'pg', '0.21.0'
+end
